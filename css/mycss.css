@@ -1,3 +1,17 @@
 .floatr{
 	float:right;
 }
+.nav{	
+	padding: 15px 50px;
+}
+.navform{
+
+	padding-top: 15px;
+}
+.navlist li{ 
+	padding: 20px;
+	margin-top: 10px;
+}
+.activityimg{
+	max-width: 100%;
+}
