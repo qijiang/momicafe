@@ -3,6 +3,7 @@
 }
 .nav{	
 	padding: 15px 50px;
+	background: #fff;
 }
 .navform{
 
@@ -14,4 +15,30 @@
 }
 .activityimg{
 	max-width: 100%;
+	margin-top: 161px;
+}
+.activitybg{
+	background: #60bceb;
+}
+.activitybg p{
+	font-size: 20px;
+	color:#fff;
+	position: relative;
+	background:#60bceb; 
+	width: 100px;
+	top:20px;
+	left:50%;
+	text-align: center;
+
+}
+.actimg{
+	padding:20px;
+	border-top:solid #fff;
+	z-index: -99;
+}
+.actimg img{
+	padding-left: 20px;
+}
+.actimg a{
+	padding-left: 10px;
 }
