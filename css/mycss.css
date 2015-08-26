@@ -1,50 +1,74 @@
-.floatr{
-	float:right;
+.floatr {
+    float: right;
 }
-.nav{	
-	padding: 15px 50px;
+
+.nav {
+    padding: 15px 50px;
+    background: #fff;
+}
+
+.navform {
+    padding-top: 15px;
+}
+
+.navlist li {
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.activityimg {
+    max-width: 100%;
+    margin-top: 161px;
+}
+
+.activitybg {
+    background: #60bceb;
+}
+
+.acttitle {
+    font-size: 20px;
+    color: #fff;
+    position: relative;
+    background: #60bceb;
+    width: 100px;
+    top: 20px;
+    left: 46%;
+    text-align: center;
+    z-index: 20
+}
+
+.actimg {
+    padding-top: 20px;
+    border-top: solid #fff;
+}
+
+.actimg img {
+	margin-right: 15px;
+    width: 376px;
+    height: 180px;
+}
+
+.actimg a {
+    padding-left: 10px;
+    color: #fff;
+}
+
+.acta {
+    float: right;
+    padding-right: 40px;
+    color: #fff;
+}
+
+.container1 {
+    width: 1170px;
+    margin: 0 auto;
+}
+.chanpin{
+	margin-top:20px;
 	background: #fff;
 }
-.navform{
+.chanpinimg{
+	width: 1140px;
+	margin:0 15px;
+}
 
-	padding-top: 15px;
-}
-.navlist li{ 
-	padding: 20px;
-	margin-top: 10px;
-}
-.activityimg{
-	max-width: 100%;
-	margin-top: 161px;
-}
-.activitybg{
-	background: #60bceb;
-}
-.acttitle{
-	font-size: 20px;
-	color:#fff;
-	position: relative;
-	background:#60bceb; 
-	width: 100px;
-	top:20px;
-	left:46%;
-	text-align: center;
-	z-index: 20
-
-}
-.actimg{
-	padding:20px;
-	border-top:solid #fff;
-}
-.actimg img{
-	padding-left: 20px;
-}
-.actimg a{
-	padding-left: 10px;
-	color:#fff;
-}
-.acta{
-	float:right;
-	padding-right: 40px;
-	color:#fff;
-}
