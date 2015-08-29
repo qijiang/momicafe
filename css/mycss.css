@@ -169,9 +169,11 @@
 #next {
     right: 5px;
 }
-#tab{
-    margin:10px auto;
-}
+
+#tabtitle ul{
+    margin:20px 12.5px 20px 100.5px;
+    }
 #tabtitle li{
     margin-right: 50px;
 }
+
