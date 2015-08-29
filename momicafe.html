@@ -7,99 +7,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/mycss.css">
     <script type="text/javascript" src="./lib/js/jquery.1.10.2.js"></script>
-    <script type="text/javascript">
-    $(function() {
-        var container = $('#container1');
-        var list = $('#list');
-        var buttons = $('#buttons span');
-        var prev = $('#prev');
-        var next = $('#next');
-        var index = 1;
-        var len = 5;
-        var interval = 3000;
-        var timer;
-
-
-        function animate(offset) {
-            var left = parseInt(list.css('left')) + offset;
-            if (offset > 0) {
-                offset = '+=' + offset;
-            } else {
-                offset = '-=' + Math.abs(offset);
-            }
-            list.animate({
-                'left': offset
-            }, 3000, function() {
-                if (left > -200) {
-                    list.css('left', -1142 * len);
-                }
-                if (left < (-1142 * len)) {
-                    list.css('left', -1142);
-                }
-            });
-        }
-
-        function showButton() {
-            buttons.eq(index - 1).addClass('on').siblings().removeClass('on');
-        }
-
-        function play() {
-            timer = setTimeout(function() {
-                next.trigger('click');
-                play();
-            }, interval);
-        }
-
-        function stop() {
-            clearTimeout(timer);
-        }
-
-        next.bind('click', function() {
-            if (list.is(':animated')) {
-                return;
-            }
-            if (index == 5) {
-                index = 1;
-            } else {
-                index += 1;
-            }
-            animate(-1142);
-            showButton();
-        });
-
-        prev.bind('click', function() {
-            if (list.is(':animated')) {
-                return;
-            }
-            if (index == 1) {
-                index = 5;
-            } else {
-                index -= 1;
-            }
-            animate(1142);
-            showButton();
-        });
-
-        buttons.each(function() {
-            $(this).bind('click', function() {
-                if (list.is(':animated') || $(this).attr('class') == 'on') {
-                    return;
-                }
-                var myIndex = parseInt($(this).attr('index'));
-                var offset = -1142 * (myIndex - index);
-
-                animate(offset);
-                index = myIndex;
-                showButton();
-            })
-        });
-
-        container.hover(stop, play);
-
-        play();
-
-    });
-    </script>
+    <script type="text/javascript" src="./lib/js/libjs.js"></script>
 </head>
 
 <body>
@@ -156,8 +64,8 @@
                         <img src="./img/zhijiang.jpg" alt="1" />
                         <img src="./img/ch2.jpg" alt="1" />
                         <img src="./img/cp3.jpg" alt="2" />
-                        <img src="./img/cp4.jpg" alt="3"  style="width:1142px;hight:481px;"/>
-                        <img src="./img/cp5.jpg" alt="4" style="width:1142px;hight:481px;"/>
+                        <img src="./img/cp4.jpg" alt="3" style="width:1142px;hight:481px;" />
+                        <img src="./img/cp5.jpg" alt="4" style="width:1142px;hight:481px;" />
                         <img src="./img/zhijiang.jpg" alt="5" />
                     </div>
                     <div id="buttons">
@@ -167,9 +75,26 @@
                         <span index="4"></span>
                         <span index="5"></span>
                     </div>
-                    <a href="javascript:;" id="prev" class="arrow"><</a>
-                    <a href="javascript:;" id="next" class="arrow">></a>
+                    <a href="javascript:;" id="prev" class="arrow">
+                        < </a>
+                            <a href="javascript:;" id="next" class="arrow">
+                            >
+                            </a>
                 </div>
+            </div>
+            <div id="tab">
+                <div id="tabtitle">
+                    <ul class="list-inline">
+                        <li>咖啡奶茶</li>
+                        <li>花草果粒茶</li>
+                        <li>明信片贺卡</li>
+                        <li>手账周边</li>
+                        <li>陶瓷产品</li>
+                        <li>伴手礼</li>
+                        <li>手绘地图</li>
+                    </ul>
+                </div>
+                <div id="tabcontent"></div>
             </div>
         </div>
     </div>
